@@ -4,7 +4,8 @@ $(document).ready(function () {
      // showSlides(slideNumber);
      // console.log(slideNumber);
 
-
+     var clock = setInterval(nextSlide, 3000);
+       
      //Invoco le funzioni per cambiare slide
      $('.next').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
           nextSlide();

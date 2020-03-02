@@ -43,6 +43,16 @@
 
 .images img.active {
      display: block;
+     animation: ciao 1s linear;
+}
+
+@keyframes ciao {
+     0%   {
+          opacity: 0;
+     }
+     100% {
+          opacity: 1;
+     }
 }
 
 /* Navigation slider */
@@ -56,6 +66,7 @@
      transform: translateX(-50%);
      background-color: rgba(0,0,0,0.5);
      cursor: pointer;
+
 }
 
 .slider-nav i.active {
