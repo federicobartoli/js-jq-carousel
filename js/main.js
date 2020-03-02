@@ -33,11 +33,16 @@ $(document).ready(function () {
 
       });
 
+
      $('.images').click(function () {
-
-               clearInterval(clock);
-
+          clearInterval(clock);
      })
+
+     $('.images').mouseenter(function () {
+          clearInterval(clock);
+     })
+
+
 
 
 
