@@ -32,6 +32,7 @@
 .images {
      width: 500px;
      height: calc(500px / 16 * 9);
+     cursor: pointer;
 }
 
 .images img {

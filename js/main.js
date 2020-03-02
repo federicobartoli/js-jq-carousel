@@ -4,8 +4,8 @@ $(document).ready(function () {
      // showSlides(slideNumber);
      // console.log(slideNumber);
 
-     var clock = setInterval(nextSlide, 3000);
-       
+     var clock = setInterval(nextSlide, 5000);
+
      //Invoco le funzioni per cambiare slide
      $('.next').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
           nextSlide();
@@ -33,6 +33,13 @@ $(document).ready(function () {
 
       });
 
+     $('.images').click(function () {
+
+               clearInterval(clock);
+
+     })
+
+
 
      //
      // function showSlides(n) {
@@ -48,6 +55,8 @@ $(document).ready(function () {
      //      slideNumber = slides.length
      //      }
      // }
+
+
 
 
      function nextSlide() {
