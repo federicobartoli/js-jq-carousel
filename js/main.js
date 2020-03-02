@@ -34,11 +34,22 @@ $(document).ready(function () {
 
       });
 
-
+     var ciao = true;
      $('.images').click(function () {
-          clearInterval(clock);
+          if (ciao == true){
+               clearInterval(clock);
+               ciao = false;
+               console.log(ciao);
+          } else {
+               clock = setInterval(nextSlide, 5000);
+               ciao = true;
+               console.log(ciao);
+          }
+
+
      })
 
+     // var ciao = true;
      // $('.images').click(function () {
      //      clearInterval(clock);
      // })
