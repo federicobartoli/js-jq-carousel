@@ -5,6 +5,11 @@ $(document).ready(function () {
      $('.next').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
           nextSlide();
      })
+     $('.prev').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
+          prevSlide();
+     })
+
+
 
 
 
@@ -32,5 +37,31 @@ $(document).ready(function () {
                prossimaPallino.addClass('active');
           }
      }
+
+
+          function prevSlide() {
+               if ($('.images img.active').hasClass('first')) {
+
+                    $('.images img.active').removeClass('active');
+                    $('.images img.last').addClass('active');
+
+                    //Pallini
+                    $('.slider-nav i.active').removeClass('active');
+                    $('.slider-nav i.last').addClass('active');
+
+               } else {
+                    var imgAttiva = $('.images img.active');
+                    var precedenteImg = $('.images img.active').prev();
+
+                    imgAttiva.removeClass('active');
+                    precedenteImg.addClass('active'); //
+
+                    var pallinoAttivo = $('.slider-nav i.active');
+                    var prossimaPallino = $('.slider-nav i.active').prev();
+
+                    pallinoAttivo.removeClass('active');
+                    prossimaPallino.addClass('active');
+               }
+          }
 
 })
