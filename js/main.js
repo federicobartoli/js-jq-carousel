@@ -34,12 +34,20 @@ $(document).ready(function () {
       });
 
 
-     $('.images').click(function () {
-          clearInterval(clock);
-     })
+     // $('.images').click(function () {
+     //      clearInterval(clock);
+     // })
+     //
+     // $('.images').click(function () {
+     //      clearInterval(clock);
+     // })
 
      $('.images').mouseenter(function () {
           clearInterval(clock);
+     })
+
+     $('.images').mouseleave(function () {
+          var clock = setInterval(nextSlide, 5000);
      })
 
 
