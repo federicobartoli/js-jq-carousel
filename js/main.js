@@ -22,8 +22,9 @@ $(document).ready(function () {
 
      $(".fa-circle").click(function() {
         var dots = $(".fa-circle");
+        console.log(dots);
         for(var i = 0; i < dots.length; i++) {
-          if ($(this).is(dots.eq(i))) {
+          if ($(this).is(dots.eq(i))) { //se è dots(numero)
             $(".images img.active").removeClass("active");
             $(".images img").eq(i).addClass("active");
           }
