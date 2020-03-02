@@ -1,16 +1,52 @@
 $(document).ready(function () {
 
+     // var slideNumber = 1;
+     // showSlides(slideNumber);
+     // console.log(slideNumber);
+
 
      //Invoco le funzioni per cambiare slide
      $('.next').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
           nextSlide();
+
      })
      $('.prev').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
           prevSlide();
      })
 
+     if (!$('.fa-circle').hasClass('active')) {
+
+     }
 
 
+     $(".fa-circle").click(function() {
+        var dots = $(".fa-circle");
+        for(var i = 0; i < dots.length; i++) {
+          if ($(this).is(dots.eq(i))) {
+            $(".images img.active").removeClass("active");
+            $(".images img").eq(i).addClass("active");
+          }
+        }
+        $(".fa-circle.active").removeClass("active");
+        $(this).addClass("active");
+
+      });
+
+
+     //
+     // function showSlides(n) {
+     //      var dots = document.getElementsByClassName("fa-circle");
+     //      var slides = document.getElementsByClassName("slides");
+     //      console.log(dots);
+     //      console.log(slides);
+     //
+     //      if (n > slides.length) {
+     //      slideNumber = 1
+     //      }
+     //      if (n < 1) {
+     //      slideNumber = slides.length
+     //      }
+     // }
 
 
      function nextSlide() {
@@ -18,6 +54,8 @@ $(document).ready(function () {
 
                $('.images img.active').removeClass('active');
                $('.images img.first').addClass('active');
+
+
 
                //Pallini
                $('.slider-nav i.active').removeClass('active');
@@ -63,5 +101,6 @@ $(document).ready(function () {
                     prossimaPallino.addClass('active');
                }
           }
+
 
 })
