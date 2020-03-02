@@ -4,7 +4,7 @@ $(document).ready(function () {
      // showSlides(slideNumber);
      // console.log(slideNumber);
 
-     var clock = setInterval(nextSlide, 5000);
+     var clock = setInterval(nextSlide, 3000);
 
      //Invoco le funzioni per cambiare slide
      $('.next').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
@@ -41,7 +41,7 @@ $(document).ready(function () {
                ciao = false;
                console.log(ciao);
           } else {
-               clock = setInterval(nextSlide, 5000);
+               clock = setInterval(nextSlide, 3000);
                ciao = true;
                console.log(ciao);
           }
@@ -54,13 +54,13 @@ $(document).ready(function () {
      //      clearInterval(clock);
      // })
 
-     // $('.images').mouseenter(function () {
-     //      clearInterval(clock);
-     // })
-     //
-     // $('.images').mouseleave(function () {
-     //      var clock = setInterval(nextSlide, 5000);
-     // })
+     $('.images').mouseenter(function () {
+          clearInterval(clock);
+     })
+
+     $('.images').mouseleave(function () {
+          clock = setInterval(nextSlide, 3000);
+     })
 
 
 
