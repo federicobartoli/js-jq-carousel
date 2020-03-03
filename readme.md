@@ -11,7 +11,7 @@ BONUS: Gestire il click su un pallino che mi sposta alla slide corrispondente.
 ## Esercizio finito
 
 Slideshow dove puoi stoppare e riattivare l'autoplay con un click .
-o
-<!-- Entrando nello slideshow con il mouse l'autoplay si stoppa, uscendo si riattiva. -->
-Dopo 20 secondi lo slideshow si blocca
+Dopo 20 secondi lo slideshow si blocca.
 Con i dots puoi scegliere la relativa immagine.
+Con la tastiera puoi fare lo switch delle immagini.
+<!-- Entrando nello slideshow con il mouse l'autoplay si stoppa, uscendo si riattiva. -->

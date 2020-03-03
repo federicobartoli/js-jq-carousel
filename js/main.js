@@ -20,19 +20,29 @@ $(document).ready(function () {
      }
 
 
-     $(".fa-circle").click(function() {
-        var dots = $(".fa-circle");
-        console.log(dots);
-        for(var i = 0; i < dots.length; i++) {
-          if ($(this).is(dots.eq(i))) { //se è dots(numero)
-            $(".images img.active").removeClass("active");
-            $(".images img").eq(i).addClass("active");
-          }
-        }
-        $(".fa-circle.active").removeClass("active");
-        $(this).addClass("active");
 
-      });
+     // Metodo 1
+     // $(".fa-circle").click(function() {
+     //    var dots = $(".fa-circle");
+     //    console.log(dots);
+     //    for(var i = 0; i < dots.length; i++) {
+     //      if ($(this).is(dots.eq(i))) { //se è dots(numero)
+     //        $(".images img.active").removeClass("active");
+     //        $(".images img").eq(i).addClass("active");
+     //      }
+     //    }
+     //    $(".fa-circle.active").removeClass("active");
+     //    $(this).addClass("active");
+     //
+     //  });
+//       METODO 2
+      $('.fa-circle').click(function(){
+           $('.fa-circle').removeClass('active');
+           $(this).addClass('active');
+           var posizione = $(this).index();
+           $('.images img.active').removeClass('active');
+           $('.images img').eq(posizione).addClass('active');
+      })
 
      var ciao = true;
      $('.images').click(function () {
@@ -146,6 +156,23 @@ $(document).ready(function () {
                     prossimaPallino.addClass('active');
                }
           }
+
+          // GESTIONE TASTIERA
+
+          $(document).keydown(function(event){
+               switch (event.key) {
+                    case 'ArrowLeft':
+                    prevSlide();
+                         break;
+                    case 'ArrowRight':
+                    nextSlide();
+                         break;
+                    default:
+                    console.log('tasto errato');
+                         break;
+
+               }
+          });
 
 
 })
