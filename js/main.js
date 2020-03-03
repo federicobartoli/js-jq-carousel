@@ -160,14 +160,19 @@ $(document).ready(function () {
           // GESTIONE TASTIERA
 
           $(document).keydown(function(event){
+               if (ciao == true){
+                    clearInterval(clock);
+                    ciao = false;
+                    console.log(ciao);
+               } 
                switch (event.key) {
                     case 'ArrowLeft':
                     prevSlide();
-                    stopTimer();
+
                          break;
                     case 'ArrowRight':
                     nextSlide();
-                    stopTimer();
+
                          break;
                     default:
                     console.log('tasto errato');
