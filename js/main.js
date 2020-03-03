@@ -42,6 +42,7 @@ $(document).ready(function () {
                console.log(ciao);
           } else {
                clock = setInterval(nextSlide, 3000);
+               stopTimer();
                ciao = true;
                console.log(ciao);
           }
