@@ -5,7 +5,7 @@ $(document).ready(function () {
      // console.log(slideNumber);
 
      var clock = setInterval(nextSlide, 3000);
-
+     stopTimer();
      //Invoco le funzioni per cambiare slide
      $('.next').click(function () { //Al click richiamo la funzione x aggiornare l'immagine visualizzando la successiva
           nextSlide();
@@ -55,7 +55,7 @@ $(document).ready(function () {
      // })
 
      // MOUSEENTER
-     
+
      //
      // $('.images').mouseenter(function () {
      //      clearInterval(clock);
@@ -87,7 +87,11 @@ $(document).ready(function () {
      // }
 
 
-
+     function stopTimer(){
+          var stop = setTimeout(function(){
+               clearInterval(clock);
+          }, 20000)
+     }
 
      function nextSlide() {
           if ($('.images img.active').hasClass('last')) {
