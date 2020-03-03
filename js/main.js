@@ -163,9 +163,11 @@ $(document).ready(function () {
                switch (event.key) {
                     case 'ArrowLeft':
                     prevSlide();
+                    stopTimer();
                          break;
                     case 'ArrowRight':
                     nextSlide();
+                    stopTimer();
                          break;
                     default:
                     console.log('tasto errato');
