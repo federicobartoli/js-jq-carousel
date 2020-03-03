@@ -54,15 +54,18 @@ $(document).ready(function () {
      //      clearInterval(clock);
      // })
 
-     $('.images').mouseenter(function () {
-          clearInterval(clock);
-          ciao = false;
-     })
-
-     $('.images').mouseleave(function () {
-          clock = setInterval(nextSlide, 3000);
-          ciao = true;
-     })
+     // MOUSEENTER
+     
+     //
+     // $('.images').mouseenter(function () {
+     //      clearInterval(clock);
+     //      ciao = false;
+     // })
+     //
+     // $('.images').mouseleave(function () {
+     //      clock = setInterval(nextSlide, 3000);
+     //      ciao = true;
+     // })
 
 
 
